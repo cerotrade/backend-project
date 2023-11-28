@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "users": {
+      "dependencies": ["nft"],
+      "main": "src/cero_trade_backend/users/main.mo",
+      "type": "motoko"
+    },
+    "nft": {
+      "main": "src/cero_trade_backend/nft/main.mo",
+      "type": "motoko"
+    },
+    "market": {
+      "dependencies": ["nft", "users"],
+      "main": "src/cero_trade_backend/market/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
